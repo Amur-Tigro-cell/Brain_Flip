@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Biryani:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Biryani', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(160deg, #6d5dfc 0%, #8f77f3 45%, #ee86b8 100%);
+    background-attachment: fixed;
+    color: white;
+}
+
+table {
+    margin: 38px auto 20px;
+    border-spacing: 8px;
+}
+
+td {
+    background: transparent;
+    height: 70px;
+    width: 70px;
+}
+
+td,
+.inner,
+.front,
+.back {
+    border-radius: 8px;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    backface-visibility: hidden;
+}
+
+.front {
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 8px 18px rgba(70, 48, 150, 0.10);
+}
+
+.back {
+    transform: rotateY(180deg);
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    background: rgba(255, 255, 255, 0.88);
+}
+
+.back p {
+    margin: 0;
+    color: #5546a3;
+    font-size: 38px;
+    line-height: 1;
+}
+
+#ol {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: rgba(74, 58, 155, 0.28);
+    color: white;
+    backdrop-filter: blur(8px);
+}
+
+#inst {
+    width: min(560px, 85vw);
+    margin: 16vh auto 12px;
+    border: 1px solid rgba(255, 255, 255, 0.62);
+    border-radius: 12px;
+    padding: 18px 28px 12px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+#inst h3 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+#inst li {
+    margin: 4px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+#inst p {
+    margin: 12px 0 4px;
+    font-size: 16px;
+}
+
+#iol {
+    width: min(560px, 85vw);
+    margin: 30vh auto 0;
+    text-align: center;
+}
+
+#iol h2 {
+    margin: 0 0 8px;
+    font-size: 34px;
+}
+
+#iol p {
+    margin: 8px 0;
+}
+
+button {
+    width: 100px;
+    margin: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 10px;
+    padding: 7px 5px;
+    color: white;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(12px);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover,
+button:active {
+    outline: 0;
+    background: rgba(255, 255, 255, 0.34);
+}
+
+#title {
+    height: 56px;
+    margin: 0 8px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    color: white;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(15px);
+    text-align: center;
+}
+
+#logo {
+    display: block;
+    padding-top: 14px;
+    font-size: 22px;
+}
+
+.scorebar {
+    position: relative;
+    height: 40px;
+}
+
+#time,
+#moves {
+    position: absolute;
+    top: 9px;
+    font-size: 16px;
+}
+
+#moves {
+    left: 20px;
+}
+
+#time {
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    table {
+        margin-top: 24px;
+        border-spacing: 5px;
+    }
+
+    td {
+        height: min(15vw, 58px);
+        width: min(15vw, 58px);
+    }
+
+    .back p {
+        font-size: 28px;
+    }
+
+    #logo {
+        font-size: 18px;
+    }
+
+    #inst {
+        margin-top: 12vh;
+        padding: 14px 18px 10px;
+    }
+
+    #inst h3 {
+        font-size: 24px;
+    }
+
+    button {
+        width: 92px;
+        margin: 4px 3px;
+    }
+}
